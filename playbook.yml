@@ -1,0 +1,17 @@
+---
+- name: Launching the AWS instance
+  hosts: localhost
+  tasks:
+  - name: Launching the AWS instance
+    ec2:
+     key_name: aws-ansible-key
+     region: ap-south-1
+     instance_type: t2.micro
+     image: ami-0889b8a448dxxxxx
+     group: Web-Server-B
+     vpc_subnet_id: subnet-904bexxxx
+     assign_public_ip: yes
+     count: 1
+     aws_access_key: XXXXXXXXXX
+     aws_secret_key: XXXXXXXXXXXXXX
+
