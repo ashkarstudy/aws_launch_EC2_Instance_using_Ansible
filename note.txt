@@ -1,0 +1,9 @@
+1) install ansible epel
+2) install python-pip
+3) install boto (pip install boto)
+4) install ansible
+5) create ssh key (ssh-keygen)
+6) copy the key /home/ec2-user/.ssh/id_rsa.pub and past to  /home/ec2-user/.ssh/authorized_keys
+7) create playbook
+8) check (ansible-playbook -C playbook.yml)
+ 
