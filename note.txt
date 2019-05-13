@@ -4,6 +4,7 @@
 4) install ansible
 5) create ssh key (ssh-keygen)
 6) copy the key /home/ec2-user/.ssh/id_rsa.pub and past to  /home/ec2-user/.ssh/authorized_keys
-7) create playbook
-8) check (ansible-playbook -C playbook.yml)
+7) aws configure (for permission IAM user)
+8) create playbook
+9) check (ansible-playbook -C playbook.yml)
  

@@ -7,11 +7,20 @@
      key_name: aws-ansible-key
      region: ap-south-1
      instance_type: t2.micro
-     image: ami-0889b8a448dxxxxx
+     image: ami-0889b8a448de4fc44
      group: Web-Server-B
-     vpc_subnet_id: subnet-904bexxxx
+     vpc_subnet_id: subnet-904be8dc
      assign_public_ip: yes
      count: 1
-     aws_access_key: XXXXXXXXXX
-     aws_secret_key: XXXXXXXXXXXXXX
+     wait: yes
+     wait_timeout: 500
+     instance_tags:
+      Name: webserver
+      Env: production
+     monitoring: no
+    register: ec2_out
+
+  - name: info ec2_out
+    debug:
+     var: ec2_out
 
